@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "aa84287a-1af0-420c-96a9-806e0af4b916",
+		"name": "bookstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30953839"
+	},
+	"item": [
+		{
+			"name": "AddBook",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 101,\n  \"category\": {\n    \"id\": 1,\n    \"name\": \"Fiction\"\n  },\n  \"name\": \"The Great Gatsby\",\n  \"photoUrls\": [\"https://m.media-amazon.com/images/I/61qPJBZToiL._SY466_.jpg\"],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"classic\"\n    }\n  ],\n  \"status\": \"available\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetInfo ByID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/101",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 101,\n  \"category\": {\n    \"id\": 2,\n    \"name\": \"Science Fiction\"\n  },\n  \"name\": \"Dune\",\n  \"photoUrls\": [\"https://m.media-amazon.com/images/I/61qctaGFdUL._SY466_.jpg\"],\n  \"tags\": [\n    {\n      \"id\": 4,\n      \"name\": \"Adventure\"\n    }\n  ],\n  \"status\": \"sold\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/101",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"101"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
